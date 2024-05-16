@@ -24,8 +24,8 @@ const CompFooter = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/signUp">
-              SignUp
+            <a className="nav-link" href="/proveedores">
+              Proveedores
             </a>
           </li>
         </ul>

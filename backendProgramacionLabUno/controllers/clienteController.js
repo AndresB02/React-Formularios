@@ -19,7 +19,7 @@ exports.mostrarClientes = async (req, res) => {
   try {
     /* find() sirve para mostrar/recuperar datos de la base de datos */
     let clientes = await Clientes.find();
-    res.json({ clientes });
+    res.json(clientes);
   } catch (error) {
     console.log(error);
     res.status(500).send("Hubo un error al mostrar el cliente");

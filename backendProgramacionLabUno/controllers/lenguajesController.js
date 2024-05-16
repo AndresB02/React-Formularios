@@ -8,7 +8,7 @@ exports.agregarLenguajes = async (req, res) => {
     let lenguajes = new Lenguajes(req.body);
     /* save() metodo para agregar */
     await lenguajes.save();
-    res.send({ lenguajes });
+    res.send(lenguajes);
   } catch (error) {
     console.log(error);
     res
@@ -22,7 +22,7 @@ exports.mostrarLenguajes = async (req, res) => {
   try {
     /* find() sirve para mostrar/recuperar datos de la base de datos */
     let lenguajes = await Lenguajes.find();
-    res.json({ lenguajes });
+    res.json(lenguajes);
   } catch (error) {
     console.log(error);
     res

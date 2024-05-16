@@ -7,8 +7,8 @@ const URL = "http://localhost:5000/programacion/lenguajes/";
 const CompEditarProgramas = () => {
   const [nombre, setNombre] = useState("");
   const [tipo, setTipo] = useState("");
-  const [duracion, setDuracion] = useState("");
   const [entidad, setEntidad] = useState("");
+  const [duracion, setDuracion] = useState("");
   const [valor, setValor] = useState("");
   const [estado, setEstado] = useState("");
   const navigate = useNavigate();
@@ -114,12 +114,12 @@ const CompEditarProgramas = () => {
           >
             Editar curso
           </button>
-          <button
-            type="submit"
+          <a
+            href="/programas"
             className="btn btn-success gap-2 col-5 d-md-block btn-lg"
           >
             Cancelar
-          </button>
+          </a>
         </div>
       </form>
     </div>

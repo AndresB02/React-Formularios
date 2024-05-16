@@ -18,7 +18,7 @@ const CompMostrarClientes = () => {
   };
 
   const eliminarCliente = async (id) => {
-    await axios.delete(`${URL}${id}`);
+    await axios.delete(`${URL}/${id}`);
     getclientes();
   };
 

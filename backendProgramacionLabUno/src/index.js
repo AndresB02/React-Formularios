@@ -20,6 +20,7 @@ app.use("/programacion/lenguajes", require("../routes/RoutesLenguajes"));
 app.use("/programacion/clientes", require("../routes/RoutesClientes"));
 app.use("/programacion/usuarios", require("../routes/RoutesUsuarios"));
 app.use("/programacion/auth", require("../routes/RoutesAuth"));
+app.use("/programacion/proveedores", require("../routes/RoutesProveedores"));
 
 /* enlazar la conexion de la base de datos */
 

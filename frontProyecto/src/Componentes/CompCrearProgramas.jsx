@@ -19,7 +19,6 @@ const CompCrearProgramas = () => {
       nombre: nombre,
       tipo: tipo,
       duracion: duracion,
-      entidad: entidad,
       valor: valor,
       estado: estado,
     });
@@ -62,16 +61,7 @@ const CompCrearProgramas = () => {
           />
           <label className="form-label">Duracion</label>
         </div>
-        <div className="form-floating mb-3 ">
-          <input
-            placeholder="Ingrese el nombre de la entidad"
-            type="texto"
-            value={entidad}
-            onChange={(e) => setEntidad(e.target.value)}
-            className="form-control"
-          />
-          <label className="form-label">Entidad</label>
-        </div>
+
         <div className="form-floating mb-3">
           <input
             placeholder="Ingrese el valor del curso"
@@ -99,12 +89,12 @@ const CompCrearProgramas = () => {
           >
             Crear curso
           </button>
-          <button
-            type="return"
+          <a
+            href="/programas"
             className="btn btn-success gap-2 col-5 d-md-block btn-lg"
           >
             Cancelar
-          </button>
+          </a>
         </div>
       </form>
     </div>

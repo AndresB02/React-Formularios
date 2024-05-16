@@ -3,11 +3,14 @@ import "./styles.css";
 import React from "react";
 import CompMostrarProgramas from "./Componentes/CompMostrarProgramas";
 import CompMostrarClientes from "./Componentes/CompMostrarClientes";
+import CompMostrarProveedores from "./Componentes/CompMostrarProveedores";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CompCrearProgramas from "./Componentes/CompCrearProgramas";
 import CompCrearClientes from "./Componentes/CompCrearClientes";
+import CompCrearProveedores from "./Componentes/CompCrearProveedores";
 import CompEditarProgramas from "./Componentes/CompEditarProgramas";
 import CompEditarClientes from "./Componentes/CompEditarCliente";
+import CompEditarProveedor from "./Componentes/CompEditarProveedores";
 //import CompLogin from "./Componentes/CompLogin";
 import CompFooter from "./Componentes/CompFooter";
 
@@ -41,22 +44,22 @@ function App() {
               <ul className="navbar-nav navUl">
                 <li className="nav-item active">
                   <a className="nav-link" href="/login">
-                    Home
+                    Inicio
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/clientes">
-                    Clients
+                    Clientes
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/programas">
-                    Courses
+                    Cursos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/signUp">
-                    SignUp
+                  <a className="nav-link" href="/proveedores">
+                    Proveedor
                   </a>
                 </li>
               </ul>
@@ -72,10 +75,19 @@ function App() {
             />
             <Route path="/clientes/" exact element={<CompMostrarClientes />} />
             <Route
+              path="/proveedores/"
+              exact
+              element={<CompMostrarProveedores />}
+            />
+            <Route
               path="/programas/agregar/"
               element={<CompCrearProgramas />}
             />
             <Route path="/clientes/agregar/" element={<CompCrearClientes />} />
+            <Route
+              path="/proveedores/agregar/"
+              element={<CompCrearProveedores />}
+            />
             <Route
               path="/programas/editar/:id"
               element={<CompEditarProgramas />}
@@ -83,6 +95,10 @@ function App() {
             <Route
               path="/clientes/editar/:id"
               element={<CompEditarClientes />}
+            />
+            <Route
+              path="/proveedores/editar/:id"
+              element={<CompEditarProveedor />}
             />
           </Routes>
         </BrowserRouter>

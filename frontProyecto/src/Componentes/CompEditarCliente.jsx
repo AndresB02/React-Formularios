@@ -114,12 +114,12 @@ const CompEditarClientes = () => {
           >
             Editar Cliente
           </button>
-          <button
-            type="submit"
+          <a
+            href="/clientes"
             className="btn btn-success gap-2 col-5 d-md-block btn-lg"
           >
             Cancelar
-          </button>
+          </a>
         </div>
       </form>
     </div>

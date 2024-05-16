@@ -43,32 +43,34 @@ const CompMostrarProgramas = () => {
               </tr>
             </thead>
             <tbody>
-              {lenguajes.map((lenguaje, index) => (
-                <tr key={index}>
-                  <td className="table-primary">{lenguaje.nombre}</td>
-                  <td className="table-info">{lenguaje.tipo}</td>
-                  <td className="table-primary">{lenguaje.duracion}</td>
-                  <td className="table-info">{lenguaje.entidad}</td>
-                  <td className="table-primary">{lenguaje.valor}</td>
-                  <td className="table-info">{lenguaje.estado}</td>
-                  <td className="table-primary d-flex gap-2">
-                    <Link
-                      to={`/programas/editar/${lenguaje._id}`}
-                      className="btn btn-primary"
-                    >
-                      {"Editar  "}
-                      <i className="fa-solid fa-file-pen"></i>
-                    </Link>
-                    <button
-                      onClick={() => eliminarPrograma(lenguaje._id)}
-                      className="btn btn-danger"
-                    >
-                      {"Eliminar  "}
-                      <i className="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {lenguajes &&
+                lenguajes.length > 0 &&
+                lenguajes.map((lenguaje, index) => (
+                  <tr key={index}>
+                    <td className="table-primary">{lenguaje.nombre}</td>
+                    <td className="table-info">{lenguaje.tipo}</td>
+                    <td className="table-primary">{lenguaje.duracion}</td>
+                    <td className="table-info">{lenguaje.entidad}</td>
+                    <td className="table-primary">{lenguaje.valor}</td>
+                    <td className="table-info">{lenguaje.estado}</td>
+                    <td className="table-primary d-flex gap-2">
+                      <Link
+                        to={`/programas/editar/${lenguaje._id}`}
+                        className="btn btn-primary"
+                      >
+                        {"Editar  "}
+                        <i className="fa-solid fa-file-pen"></i>
+                      </Link>
+                      <button
+                        onClick={() => eliminarPrograma(lenguaje._id)}
+                        className="btn btn-danger"
+                      >
+                        {"Eliminar  "}
+                        <i className="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
